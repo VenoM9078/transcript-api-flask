@@ -58,7 +58,7 @@ def process_audio():
         chunk_file_path = f'{folder_name}/chunk_{i // chunk_duration_ms}.mp3'
         chunk.export(chunk_file_path, format="mp3")
 
-        # Upload chunk to Cloudinary
+        # Upload chunk to Cloudinary to get API (secure URL)
         upload_result = cloudinary.uploader.upload(chunk_file_path, resource_type = "video")
 
         # Append the secure URL to chunk_urls
