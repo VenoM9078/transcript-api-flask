@@ -8,6 +8,7 @@ import cloudinary.uploader
 import cloudinary.api
 from pytube import YouTube
 from moviepy.editor import AudioFileClip
+import time
 
 app = Flask(__name__)
 
@@ -65,6 +66,63 @@ def process_audio():
         chunk_urls.append(upload_result['secure_url'])
 
     return jsonify({"message": "Audio processed into chunks and uploaded to Cloudinary.", "chunk_urls": chunk_urls}), 200
+
+@app.route('/upload-yt', methods=['POST'])
+def upload_yt():
+    if 'url' not in request.json:
+        return jsonify({"error": "No URL provided."}), 400
+
+    url = request.json['url']
+
+    # Generate a unique identifier for the files
+    unique_id = str(uuid.uuid4())
+
+    # Download YouTube video
+    try:
+        yt = YouTube(url)
+        video = yt.streams.filter(progressive=True, file_extension='mp4', res="720p").order_by(
+            'resolution').desc().first()
+        audio = yt.streams.filter(only_audio=True).first()
+    except Exception as e:
+        return jsonify({"error": "Could not download YouTube video."}), 400
+
+    # Create youtube directory if it doesn't exist
+    if not os.path.exists('youtube'):
+        os.makedirs('youtube')
+
+    # Save video and audio to temporary files with the unique identifier
+    video.download(output_path="youtube", filename=f"temp_video_{unique_id}")
+    audio.download(output_path="youtube", filename=f"temp_audio_{unique_id}")
+
+    os.rename(f"youtube/temp_video_{unique_id}", f"youtube/temp_video_{unique_id}.mp4")
+    os.rename(f"youtube/temp_audio_{unique_id}", f"youtube/temp_audio_{unique_id}.mp4")
+
+    video_file = f"youtube/temp_video_{unique_id}.mp4"
+    audio_file = f"youtube/temp_audio_{unique_id}.mp4"  # audio is downloaded as .mp4
+
+    # Wait for downloads to finish
+    while not os.path.exists(video_file) or not os.path.exists(audio_file):
+        time.sleep(1)
+
+    # Convert audio to MP3 using pydub
+    audio = AudioSegment.from_file(audio_file)
+    audio.export(f"youtube/temp_audio_{unique_id}.mp3", format='mp3')
+
+    # Upload video and audio files to Cloudinary
+    try:
+        video_cloudinary_result = cloudinary.uploader.upload(video_file, resource_type="video")
+        audio_cloudinary_result = cloudinary.uploader.upload(f"youtube/temp_audio_{unique_id}.mp3",
+                                                             resource_type="video")
+    except Exception as e:
+        return jsonify({"error": "Could not upload files to Cloudinary."}), 400
+
+    # Remove temporary files
+    os.remove(video_file)
+    os.remove(audio_file)
+    os.remove(f"youtube/temp_audio_{unique_id}.mp3")
+
+    # Return the secure URLs for the uploaded files
+    return jsonify({"audioFile": audio_cloudinary_result['secure_url'], "videoFile": video_cloudinary_result['secure_url']}), 200
 
 
 if __name__ == '__main__':
