@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import requests
 import os
+os.environ['PATH'] += ':/usr/bin/ffmpeg'
 import uuid
 from pydub import AudioSegment
 import cloudinary
