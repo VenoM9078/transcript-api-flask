@@ -1,7 +1,7 @@
+import pydub
 from flask import Flask, request, jsonify
 import requests
 import os
-os.environ['PATH'] += ':/usr/bin/ffmpeg'
 import uuid
 from pydub import AudioSegment
 import cloudinary
@@ -10,6 +10,18 @@ import cloudinary.api
 from pytube import YouTube
 from moviepy.editor import AudioFileClip
 import time
+
+# Specify the paths to ffprobe and ffmpeg
+ffprobe_path = "/var/www/transcript-api-flask/ffmpeg-linux/ffprobe"
+ffmpeg_path = "/var/www/transcript-api-flask/ffmpeg-linux/ffmpeg"
+
+# Set the environment variables for pydub
+os.environ["PATH"] += os.pathsep + os.path.dirname(ffmpeg_path)
+os.environ["PATH"] += os.pathsep + os.path.dirname(ffprobe_path)
+
+# Set the paths for ffprobe and ffmpeg in pydub
+AudioSegment.ffmpeg = ffmpeg_path
+AudioSegment.ffprobe = ffprobe_path
 
 app = Flask(__name__)
 
