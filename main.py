@@ -12,8 +12,8 @@ from moviepy.editor import AudioFileClip
 import time
 
 # Specify the paths to ffprobe and ffmpeg
-ffprobe_path = "/var/www/transcript-api-flask/ffmpeg-linux/ffprobe"
-ffmpeg_path = "/var/www/transcript-api-flask/ffmpeg-linux/ffmpeg"
+ffprobe_path = "/usr/bin/ffprobe"
+ffmpeg_path = "/usr/bin/ffmpeg"
 
 # Set the environment variables for pydub
 os.environ["PATH"] += os.pathsep + os.path.dirname(ffmpeg_path)
