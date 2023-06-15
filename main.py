@@ -14,6 +14,10 @@ import logging
 
 logging.basicConfig(filename='app.log', level=logging.INFO)
 
+l = logging.getLogger("pydub.converter")
+l.setLevel(logging.DEBUG)
+l.addHandler(logging.StreamHandler())
+
 
 # Specify the paths to ffprobe and ffmpeg
 ffprobe_path = "/usr/bin/ffprobe"
@@ -26,6 +30,7 @@ os.environ["PATH"] += os.pathsep + os.path.dirname(ffprobe_path)
 # Set the paths for ffprobe and ffmpeg in pydub
 AudioSegment.ffmpeg = ffmpeg_path
 AudioSegment.ffprobe = ffprobe_path
+AudioSegment.converter = "/usr/bin/ffmpeg"
 
 app = Flask(__name__)
 
