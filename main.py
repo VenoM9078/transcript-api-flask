@@ -10,6 +10,10 @@ import cloudinary.api
 from pytube import YouTube
 from moviepy.editor import AudioFileClip
 import time
+import logging
+
+logging.basicConfig(filename='app.log', level=logging.INFO)
+
 
 # Specify the paths to ffprobe and ffmpeg
 ffprobe_path = "/usr/bin/ffprobe"
@@ -34,24 +38,31 @@ cloudinary.config(
 
 @app.route('/process_audio', methods=['POST'])
 def process_audio():
+    logging.info('Processing audio request')
+
     if 'url' not in request.json:
+        logging.error('No URL provided in request')
         return jsonify({"error": "No URL provided."}), 400
 
     url = request.json['url']
+    logging.info('Received audio URL: %s', url)
 
     # check if file is an mp3
     if not url.lower().endswith('.mp3'):
+        logging.error('URL does not point to an MP3 file')
         return jsonify({"error": "URL must point to an MP3 file."}), 400
 
     response = requests.get(url, stream=True)
 
     if response.status_code != 200:
+        logging.error('Could not download file, status code: %s', response.status_code)
         return jsonify({"error": "Could not download file."}), 400
 
     # create a temporary file for the downloaded audio
     temp_audio_path = "temp_audio.mp3"
     with open(temp_audio_path, 'wb') as f:
         f.write(response.content)
+    logging.info('Audio downloaded and saved to temp file')
 
     # Load your MP3 file
     audio = AudioSegment.from_mp3(temp_audio_path)
@@ -71,13 +82,20 @@ def process_audio():
         chunk = audio[i:i + chunk_duration_ms]
         chunk_file_path = f'{folder_name}/chunk_{i // chunk_duration_ms}.mp3'
         chunk.export(chunk_file_path, format="mp3")
+        logging.info('Created chunk and saved as MP3')
 
         # Upload chunk to Cloudinary
-        upload_result = cloudinary.uploader.upload(chunk_file_path, resource_type = "video")
+        try:
+            upload_result = cloudinary.uploader.upload(chunk_file_path, resource_type = "video")
+        except Exception as e:
+            logging.error('Failed to upload chunk to Cloudinary: %s', str(e))
+            return jsonify({"error": "Failed to upload chunk to Cloudinary."}), 500
 
         # Append the secure URL to chunk_urls
         chunk_urls.append(upload_result['secure_url'])
+        logging.info('Chunk uploaded to Cloudinary: %s', upload_result['secure_url'])
 
+    logging.info('Audio processed into chunks and uploaded to Cloudinary.')
     return jsonify({"message": "Audio processed into chunks and uploaded to Cloudinary.", "chunk_urls": chunk_urls}), 200
 
 @app.route('/upload-yt', methods=['POST'])
