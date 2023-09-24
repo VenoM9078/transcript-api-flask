@@ -20,8 +20,8 @@ l.addHandler(logging.StreamHandler())
 
 
 # Specify the paths to ffprobe and ffmpeg
-ffprobe_path = "/usr/bin/ffprobe"
-ffmpeg_path = "/usr/bin/ffmpeg"
+ffprobe_path = "ffmpeg/bin/ffprobe.exe"
+ffmpeg_path = "ffmpeg/bin/ffmpeg.exe"
 
 # Set the environment variables for pydub
 os.environ["PATH"] += os.pathsep + os.path.dirname(ffmpeg_path)
@@ -30,7 +30,7 @@ os.environ["PATH"] += os.pathsep + os.path.dirname(ffprobe_path)
 # Set the paths for ffprobe and ffmpeg in pydub
 AudioSegment.ffmpeg = ffmpeg_path
 AudioSegment.ffprobe = ffprobe_path
-AudioSegment.converter = "/usr/bin/ffmpeg"
+AudioSegment.converter = ffmpeg_path
 
 app = Flask(__name__)
 
@@ -120,6 +120,7 @@ def upload_yt():
             'resolution').desc().first()
         audio = yt.streams.filter(only_audio=True).first()
     except Exception as e:
+        print("this works");
         return jsonify({"error": "Could not download YouTube video."}), 400
 
     # Create youtube directory if it doesn't exist

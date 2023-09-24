@@ -21,3 +21,136 @@ INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a
  * Running on http://127.0.0.1:5173
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5173
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 865-746-317
+INFO:werkzeug:127.0.0.1 - - [03/Jul/2023 19:12:20] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jul/2023 19:12:20] "[33mGET /@react-refresh HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jul/2023 19:12:20] "[33mGET /src/main.jsx?t=1688387912667 HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5173
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 865-746-317
+INFO:werkzeug: * Detected change in 'D:\\Web Projects\\transcript-api-flask\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 865-746-317
+INFO:werkzeug:127.0.0.1 - - [03/Jul/2023 19:33:12] "[31m[1mGET /upload-yt HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [03/Jul/2023 19:35:37] "[31m[1mPOST /upload-yt HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'D:\\Web Projects\\transcript-api-flask\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 865-746-317
+INFO:werkzeug:127.0.0.1 - - [03/Jul/2023 19:41:25] "[31m[1mPOST /upload-yt HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [03/Jul/2023 19:41:44] "[31m[1mPOST /upload-yt HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5173
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 865-746-317
+INFO:werkzeug:127.0.0.1 - - [03/Jul/2023 19:43:28] "[31m[1mPOST /upload-yt HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'D:\\Web Projects\\transcript-api-flask\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 865-746-317
+INFO:werkzeug:127.0.0.1 - - [03/Jul/2023 19:46:27] "[31m[1mPOST /upload-yt HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5173
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 865-746-317
+INFO:werkzeug:127.0.0.1 - - [03/Jul/2023 20:02:14] "[31m[1mPOST /upload-yt HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [03/Jul/2023 20:02:49] "[31m[1mPOST /upload-yt HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5173
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 865-746-317
+INFO:werkzeug: * Detected change in 'C:\\Users\\a\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\decorator.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 865-746-317
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5173
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 865-746-317
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5173
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 865-746-317
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2023 13:57:15] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2023 13:57:24] "[31m[1mGET /upload-yt HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2023 13:57:30] "[31m[1mPOST /upload-yt HTTP/1.1[0m" 415 -
+DEBUG:pydub.converter:subprocess.call(['ffmpeg/bin/', '-y', '-i', 'youtube/temp_audio_688601ab-bf83-4879-8561-4561ff44e1b7.mp4', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2023 13:58:40] "[35m[1mPOST /upload-yt HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5173
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 865-746-317
+DEBUG:pydub.converter:subprocess.call(['ffmpeg/bin/', '-y', '-i', 'youtube/temp_audio_874f7342-1562-44ee-8a77-0866121f3203.mp4', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2023 14:04:32] "[35m[1mPOST /upload-yt HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'D:\\Web Projects\\transcript-api-flask\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 865-746-317
+DEBUG:pydub.converter:subprocess.call(['ffmpeg/bin/ffmpeg.exe', '-y', '-i', 'youtube/temp_audio_8fac89fc-4184-4020-8d84-2fcda9ebeb1f.mp4', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+DEBUG:pydub.converter:subprocess.call(['ffmpeg/bin/ffmpeg.exe', '-y', '-f', 'wav', '-i', 'C:\\Users\\a\\AppData\\Local\\Temp\\tmp0dse36x0', '-f', 'mp3', 'C:\\Users\\a\\AppData\\Local\\Temp\\tmpcc65qy12'])
+DEBUG:pydub.converter:subprocess output: b'ffmpeg version 2023-05-31-git-baa9fccf8d-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers'
+DEBUG:pydub.converter:subprocess output: b'  built with gcc 12.2.0 (Rev10, Built by MSYS2 project)'
+DEBUG:pydub.converter:subprocess output: b'  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-ffnvcodec --enable-nvdec --enable-nvenc --enable-d3d11va --enable-dxva2 --enable-libvpl --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband'
+DEBUG:pydub.converter:subprocess output: b'  libavutil      58. 12.100 / 58. 12.100'
+DEBUG:pydub.converter:subprocess output: b'  libavcodec     60. 16.100 / 60. 16.100'
+DEBUG:pydub.converter:subprocess output: b'  libavformat    60.  5.100 / 60.  5.100'
+DEBUG:pydub.converter:subprocess output: b'  libavdevice    60.  2.100 / 60.  2.100'
+DEBUG:pydub.converter:subprocess output: b'  libavfilter     9.  8.101 /  9.  8.101'
+DEBUG:pydub.converter:subprocess output: b'  libswscale      7.  3.100 /  7.  3.100'
+DEBUG:pydub.converter:subprocess output: b'  libswresample   4. 11.100 /  4. 11.100'
+DEBUG:pydub.converter:subprocess output: b'  libpostproc    57.  2.100 / 57.  2.100'
+DEBUG:pydub.converter:subprocess output: b'[aist#0:0/pcm_s16le @ 000001d0158052c0] Guessed Channel Layout: stereo'
+DEBUG:pydub.converter:subprocess output: b"Input #0, wav, from 'C:\\Users\\a\\AppData\\Local\\Temp\\tmp0dse36x0':"
+DEBUG:pydub.converter:subprocess output: b'  Duration: 00:04:17.00, bitrate: 1411 kb/s'
+DEBUG:pydub.converter:subprocess output: b'  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 2 channels, s16, 1411 kb/s'
+DEBUG:pydub.converter:subprocess output: b'Stream mapping:'
+DEBUG:pydub.converter:subprocess output: b'  Stream #0:0 -> #0:0 (pcm_s16le (native) -> mp3 (libmp3lame))'
+DEBUG:pydub.converter:subprocess output: b'Press [q] to stop, [?] for help'
+DEBUG:pydub.converter:subprocess output: b"Output #0, mp3, to 'C:\\Users\\a\\AppData\\Local\\Temp\\tmpcc65qy12':"
+DEBUG:pydub.converter:subprocess output: b'  Metadata:'
+DEBUG:pydub.converter:subprocess output: b'    TSSE            : Lavf60.5.100'
+DEBUG:pydub.converter:subprocess output: b'  Stream #0:0: Audio: mp3, 44100 Hz, stereo, s16p'
+DEBUG:pydub.converter:subprocess output: b'    Metadata:'
+DEBUG:pydub.converter:subprocess output: b'      encoder         : Lavc60.16.100 libmp3lame'
+DEBUG:pydub.converter:subprocess output: b'size=       0kB time=-577014:32:22.77 bitrate=  -0.0kbits/s speed=N/A'
+DEBUG:pydub.converter:subprocess output: b'size=     212kB time=00:00:13.55 bitrate= 128.1kbits/s speed=27.1x'
+DEBUG:pydub.converter:subprocess output: b'size=     256kB time=00:00:28.57 bitrate=  73.4kbits/s speed=28.5x'
+DEBUG:pydub.converter:subprocess output: b'size=     512kB time=00:00:46.15 bitrate=  90.9kbits/s speed=30.7x'
+DEBUG:pydub.converter:subprocess output: b'size=     768kB time=00:01:03.79 bitrate=  98.6kbits/s speed=31.9x'
+DEBUG:pydub.converter:subprocess output: b'size=    1280kB time=00:01:22.07 bitrate= 127.8kbits/s speed=32.8x'
+DEBUG:pydub.converter:subprocess output: b'size=    1536kB time=00:01:41.43 bitrate= 124.0kbits/s speed=33.8x'
+DEBUG:pydub.converter:subprocess output: b'size=    1792kB time=00:02:00.66 bitrate= 121.7kbits/s speed=34.4x'
+DEBUG:pydub.converter:subprocess output: b'size=    2048kB time=00:02:15.44 bitrate= 123.9kbits/s speed=33.8x'
+DEBUG:pydub.converter:subprocess output: b'size=    2048kB time=00:02:26.67 bitrate= 114.4kbits/s speed=32.6x'
+DEBUG:pydub.converter:subprocess output: b'size=    2304kB time=00:02:34.09 bitrate= 122.5kbits/s speed=30.5x'
+DEBUG:pydub.converter:subprocess output: b'size=    2304kB time=00:02:37.85 bitrate= 119.6kbits/s speed=28.5x'
+DEBUG:pydub.converter:subprocess output: b'size=    2560kB time=00:02:47.18 bitrate= 125.4kbits/s speed=27.6x'
+DEBUG:pydub.converter:subprocess output: b'size=    2560kB time=00:02:58.02 bitrate= 117.8kbits/s speed=27.2x'
+DEBUG:pydub.converter:subprocess output: b'size=    2816kB time=00:03:13.59 bitrate= 119.2kbits/s speed=27.5x'
+DEBUG:pydub.converter:subprocess output: b'size=    3072kB time=00:03:30.26 bitrate= 119.7kbits/s speed=27.9x'
+DEBUG:pydub.converter:subprocess output: b'size=    3328kB time=00:03:47.60 bitrate= 119.8kbits/s speed=28.3x'
+DEBUG:pydub.converter:subprocess output: b'size=    3584kB time=00:04:03.95 bitrate= 120.3kbits/s speed=28.5x'
+DEBUG:pydub.converter:subprocess output: b'[out#0/mp3 @ 000001d015805480] video:0kB audio:4016kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.006127%'
+DEBUG:pydub.converter:subprocess output: b'size=    4017kB time=00:04:16.99 bitrate= 128.0kbits/s speed=28.8x'
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2023 14:05:59] "POST /upload-yt HTTP/1.1" 200 -
